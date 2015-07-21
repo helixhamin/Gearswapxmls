@@ -107,28 +107,41 @@ function init_gear_sets()
     --sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
 
     sets.midcast['Enfeebling Magic'] = {
+    head="Wizard's Petasos",
+    body="Wizard's Coat",
     hands="Sly Gauntlets",
-    ear1="Morion Earring +1",
-    ear2="Enfeebling Earring"}
+    legs="Wizard's Tonban",
+    neck="Enfeebling Torque",
+    left_ear="Morion Earring +1",
+    right_ear="Enfeebling Earring"}
         
     sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
 
     sets.midcast['Dark Magic'] = {
-    hands="Sly Gauntlets",
-    ear1="Morion Earring +1",
-    ear2="Dark Earring"}
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Wizard's Tonban",
+    neck="Dark Torque",
+    left_ear="Morion Earring +1",
+    right_ear="Dark Earring"}
 
     sets.midcast.Drain = {
-    hands="Sly Gauntlets",
-    ear1="Morion Earring +1",
-    ear2="Dark Earring"}
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Wizard's Tonban",
+    neck="Dark Torque",
+    left_ear="Morion Earring +1",
+    right_ear="Dark Earring"}
     
     sets.midcast.Aspir = sets.midcast.Drain
 
     sets.midcast.Stun = {
-    hands="Sly Gauntlets",
-    ear1="Morion Earring +1",
-    ear2="Dark Earring"}
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Wizard's Tonban",
+    neck="Dark Torque",
+    left_ear="Morion Earring +1",
+    right_ear="Dark Earring"}
 
     -- sets.midcast.BardSong = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Sturm's Report",
         -- head="Nahtirah Hat",neck="Weike Torque",ear1="Psystorm Earring",ear2="Lifestorm Earring",
@@ -139,14 +152,20 @@ function init_gear_sets()
     -- Elemental Magic sets
     
     sets.midcast['Elemental Magic'] = {
+    body="Demon's Cloak",
     hands="Wizard's Gloves",
-    ear1="Ardent Earring",
-    ear2="Elemental Earring"}
+    legs="Druid's Slops",
+    neck="Elemental Torque",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring"}
 
     sets.midcast['Elemental Magic'].Resistant = {
+    body="Demon's Cloak",
     hands="Wizard's Gloves",
-    ear1="Ardent Earring",
-    ear2="Elemental Earring"}
+    legs="Druid's Slops",
+    neck="Elemental Torque",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring"}
 
     sets.midcast['Elemental Magic'].HighTierNuke = set_combine(sets.midcast['Elemental Magic'])--, {sub="Wizzan Grip"})
     sets.midcast['Elemental Magic'].HighTierNuke.Resistant = set_combine(sets.midcast['Elemental Magic'])--, {sub="Wizzan Grip"})
@@ -154,9 +173,12 @@ function init_gear_sets()
 
     -- Minimal damage gear for procs.
     sets.midcast['Elemental Magic'].Proc = {
+    body="Demon's Cloak",
     hands="Wizard's Gloves",
-    ear1="Ardent Earring",
-    ear2="Elemental Earring"}
+    legs="Druid's Slops",
+    neck="Elemental Torque",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring"}
 
 
     
@@ -172,29 +194,73 @@ function init_gear_sets()
     -- Idle sets
     
     -- Normal refresh idle set
-    sets.idle = {main="Chatoyant Staff",sub="Lizard Strap +1",ammo="Morion Tathlum",
-        head="T.M. Hat +2",neck="Solon Torque",ear1="Morion Earring +1",ear2="Enfeebling Earring",
-        body="Ryl.Sqr. Robe +2",hands="Sly Gauntlets",ring1="Genius Ring +1",ring2="Genius Ring +1",
-        back="Refraction Cape",waist="Ocean Stone",legs="Magic Slacks",feet="T.M. Pigaches +2"}
+    sets.idle = {
+    main="Chatoyant Staff",
+    sub="Bugard Strap +1",
+    ammo="Morion Tathlum",
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Druid's Slops",
+    feet="T.M. Pigaches +2",
+    neck="Elemental Torque",
+    waist="Penitent's Rope",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring",
+    left_ring="Genius Ring +1",
+    right_ring="Genius Ring +1",
+    back="Red Cape +1"}
 
     -- Idle mode that keeps PDT gear on, but doesn't prevent normal gear swaps for precast/etc.
-    sets.idle.PDT = {main="Chatoyant Staff",sub="Lizard Strap +1",ammo="Morion Tathlum",
-        head="T.M. Hat +2",neck="Solon Torque",ear1="Morion Earring +1",ear2="Enfeebling Earring",
-        body="Ryl.Sqr. Robe +2",hands="Sly Gauntlets",ring1="Genius Ring +1",ring2="Genius Ring +1",
-        back="Refraction Cape",waist="Ocean Stone",legs="Magic Slacks",feet="T.M. Pigaches +2"}
+    sets.idle.PDT = {
+    main="Chatoyant Staff",
+    sub="Bugard Strap +1",
+    ammo="Morion Tathlum",
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Druid's Slops",
+    feet="T.M. Pigaches +2",
+    neck="Elemental Torque",
+    waist="Penitent's Rope",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring",
+    left_ring="Genius Ring +1",
+    right_ring="Genius Ring +1",
+    back="Red Cape +1"}
 
     -- Idle mode scopes:
     -- Idle mode when weak.
-    sets.idle.Weak = {main="Chatoyant Staff",sub="Lizard Strap +1",ammo="Morion Tathlum",
-        head="T.M. Hat +2",neck="Solon Torque",ear1="Morion Earring +1",ear2="Enfeebling Earring",
-        body="Ryl.Sqr. Robe +2",hands="Sly Gauntlets",ring1="Genius Ring +1",ring2="Genius Ring +1",
-        back="Refraction Cape",waist="Ocean Stone",legs="Magic Slacks",feet="T.M. Pigaches +2"}
+    sets.idle.Weak = {
+    main="Chatoyant Staff",
+    sub="Bugard Strap +1",
+    ammo="Morion Tathlum",
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Druid's Slops",
+    feet="T.M. Pigaches +2",
+    neck="Elemental Torque",
+    waist="Penitent's Rope",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring",
+    left_ring="Genius Ring +1",
+    right_ring="Genius Ring +1",
+    back="Red Cape +1"}
     
     -- Town gear.
-    sets.idle.Town = {main="Chatoyant Staff",sub="Lizard Strap +1",ammo="Morion Tathlum",
-        head="T.M. Hat +2",neck="Solon Torque",ear1="Morion Earring +1",ear2="Enfeebling Earring",
-        body="Ryl.Sqr. Robe +2",hands="Sly Gauntlets",ring1="Genius Ring +1",ring2="Genius Ring +1",
-        back="Refraction Cape",waist="Ocean Stone",legs="Magic Slacks",feet="T.M. Pigaches +2"}
+    sets.idle.Town = {
+    main="Chatoyant Staff",
+    sub="Bugard Strap +1",
+    ammo="Morion Tathlum",
+    body="Demon's Cloak",
+    hands="Wizard's Gloves",
+    legs="Druid's Slops",
+    feet="T.M. Pigaches +2",
+    neck="Elemental Torque",
+    waist="Penitent's Rope",
+    left_ear="Ardent Earring",
+    right_ear="Elemental Earring",
+    left_ring="Genius Ring +1",
+    right_ring="Genius Ring +1",
+    back="Red Cape +1"}
         
     -- Defense sets
 
